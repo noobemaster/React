@@ -1,12 +1,17 @@
 const Movie = ({ movie }) => {
-  let { Title, Year, Genre, Plot, Poster, Rated, Released, Ratings } = movie;
+  let { Title, Year, Genre, Plot, Poster, Rated, Released, Ratings, imdbID } =
+    movie;
   return (
     <>
       {Poster &&
         (Poster === "N/A" ? (
           ""
         ) : (
-          <div className="card" style={{ maxWidth: 540, marginRight: 30 }}>
+          <div
+            key={imdbID}
+            className="card"
+            style={{ maxWidth: 540, marginRight: 30 }}
+          >
             <div className="row g-2">
               <div className="col-md-4">
                 <img

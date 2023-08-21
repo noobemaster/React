@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Nav = ({ changeMovie }) => {
   const [movie, setmovie] = useState("");
   const find = () => {
-    const url = `http://www.omdbapi.com/?t=${movie}&apikey=272e6847`;
-    fetch(url)
+    fetch(`http://www.omdbapi.com/?t=${movie}&apikey=272e6847`)
       .then((res) => res.json())
       .then((data) => {
         changeMovie([data]);
