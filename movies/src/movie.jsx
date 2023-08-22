@@ -1,6 +1,16 @@
 const Movie = ({ movie }) => {
-  let { Title, Year, Genre, Plot, Poster, Rated, Released, Ratings, imdbID } =
-    movie;
+  const {
+    Title,
+    Year,
+    Genre,
+    Plot,
+    Poster,
+    Rated,
+    Released,
+    Ratings,
+    imdbID,
+    totalSeasons,
+  } = movie;
   return (
     <>
       {Poster &&
@@ -13,7 +23,7 @@ const Movie = ({ movie }) => {
             style={{ maxWidth: 540, marginRight: 30 }}
           >
             <div className="row g-2">
-              <div className="col-md-4">
+              <div className="col-md-4" style={{ paddingTop: 20 }}>
                 <img
                   src={Poster}
                   className="img-fluid rounded-start"
@@ -22,11 +32,12 @@ const Movie = ({ movie }) => {
               </div>
               <div className="col-md-8">
                 <div className="card-body">
-                  <h3 className="card-title"></h3>
+                  <h3 className="card-title">{Title}</h3>
                   <div className="card-text">
-                    <h5>{Title}</h5>
+                    <h5></h5>
                     <h6>Year: {Year} </h6>
                     <h6>Rated: {Rated}</h6>
+                    {totalSeasons && <h6>Number of seasons: {totalSeasons}</h6>}
                     <h6>Genre: {Genre}</h6>
                     <h6>Release date: {Released}</h6>
                     <h6>

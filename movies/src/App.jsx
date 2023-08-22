@@ -16,6 +16,7 @@ function App() {
         });
     }
   };
+  localStorage.setItem("movie", [movieList]);
   useEffect(() => get(), []);
   return (
     <>
