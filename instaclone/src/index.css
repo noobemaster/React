@@ -66,3 +66,7 @@ hr {
   height: 30px;
   border-radius: 10px;
 }
+#search {
+  width: 70vw;
+  background-color: rgb(68, 67, 67);
+}

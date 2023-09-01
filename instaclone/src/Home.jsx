@@ -3,19 +3,18 @@ import { useState } from "react";
 const Home = ({ pic }) => {
   const [activ, chActiv] = useState([{ like: false }, { book: false }]);
   const sty = { color: "red" };
-  function change(e) {
+  function change(e, op) {
     const [like, book] = activ;
     const targ = e.target.id;
-    if (targ === "like") {
-      activ[0] = { [targ]: !like.like };
+    if ((targ || op) === "like") {
+      activ[0] = { [[targ || op]]: !like.like };
       chActiv([...activ]);
     } else if (targ === "book") {
       activ[1] = { [targ]: !book.book };
       chActiv([...activ]);
     }
-
-    console.log();
   }
+
   return (
     <>
       <div style={{ textAlign: "center" }}>
@@ -28,7 +27,7 @@ const Home = ({ pic }) => {
           <img src={pic} alt="profile picture" className="profile-post" />
           <div className="Name">name</div>
         </div>
-        <div>
+        <div onDoubleClick={(e) => change(e, "like")}>
           <img src={pic} alt="post" className="post" />
         </div>
         <br />
