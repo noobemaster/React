@@ -23,7 +23,7 @@ const Nav = ({ changeMovie }) => {
         <span className="d-flex">
           <input
             className="form-control me-2"
-            type="text"
+            type="search"
             placeholder="Search"
             aria-label="Search"
             value={movie}

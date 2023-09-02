@@ -28,7 +28,7 @@ function App() {
           className="btn btn-primary"
           style={{ marginBottom: 10 }}
         >
-          get random movie
+          GET RANDOM FILM
         </button>
         <div className="row row-cols-1 row-cols-md-2 g-4">
           {movieList &&

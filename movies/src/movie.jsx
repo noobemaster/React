@@ -37,7 +37,7 @@ const Movie = ({ movie }) => {
                     <h5></h5>
                     <h6>Year: {Year} </h6>
                     <h6>Rated: {Rated}</h6>
-                    {totalSeasons && <h6>Number of seasons: {totalSeasons}</h6>}
+                    {totalSeasons && <h6>N.o seasons: {totalSeasons}</h6>}
                     <h6>Genre: {Genre}</h6>
                     <h6>Release date: {Released}</h6>
                     <h6>
